@@ -1,50 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-		/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>01</title>
-		<link rel="stylesheet" href="./css/style.css" />
-	</head>
-	<body>
-		<header class="primary-header">
-			<nav class="navbar container">
-				<a href="index.html" class="logo">TOURS.</a>
-				<ul class="nav-list">
-					<li>
-						<a href="index.html" class="nav-link">Home</a>
-					</li>
-					<li>
-						<a href="#" class="nav-link">Pricing</a>
-					</li>
-					<li>
-						<a href="#" class="nav-link">Dates</a>
-					</li>
-					<li>
-						<a href="#" class="nav-link">Testimonials</a>
-					</li>
-					<li>
-						<a href="#" class="nav-link">Contact</a>
-					</li>
-				</ul>
-				<a href="#" class="button">Book now</a>
-			</nav>
-		</header>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FormSubmit</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	
+	<form action="https://formsubmit.co/hola@laumujica.com.ar" method="POST">
+		<!-- Honeypot -->
+		<input type="text" name="_honey" style="display: none">
 
-		<section class="hero"></section>
-		<section class="demo-content"></section>
+		<!-- Disable Captcha -->
+		<input type="hidden" name="_captcha" value="false">
+		
+		<!-- Next -->
+		<input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
 
-		<script>
-			const isScrolling = () => {
-				const headerEl = document.querySelector('.primary-header')
-				let windowPosition = window.scrollY > 250
-				headerEl.classList.toggle('active', windowPosition)
-			}
-			window.addEventListener('scroll', isScrolling)
-		</script>
-	</body>
+		<label for="name">Name</label>
+		<input type="text" id="name" name="Name" required>
+	  
+		<label for="email">Email</label>
+		<input type="email" id="email" name="Email" required>
+	  
+		<label for="message">Message</label>
+		<textarea id="message" name="Message" required></textarea>
+	  
+		<button type="submit">Send Message</button>
+	  </form>
+
+</body>
 </html>
